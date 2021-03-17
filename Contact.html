@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <script>
+            function validate(){
+                var msg = ""
+                if( document.getElementById('service').value == "")
+                msg= "Please pick a service";
+                if(document.getElementById('name').value=="" || document.getElementById('loc').value == "" || document.getElementById('email').value == "" || document.getElementById('comp').value == "")
+                msg += "Please make sure to fill all the fields marked with * ";
+                if(msg != "")
+                {
+                    alert(msg);
+                    return false;
+                } else{
+                    msg="request succesffuly submitted , we'll contact you soon"
+                    alert(msg)
+                    return true;
+                }
+            }
+            function redirects(){
+                if(validate)
+                second.style.visibility = "visible";
+            }
+
+        </script>
+        <title>Contact us</title>
+       <div align = center ><h1 >Contact Us</h1>
+       <h5>please fill the form down below </h5></div>
+    </head>
+    <body>
+        <form name="f2">
+            <table width = 50% border="1" align="center">
+                <tr>
+                    <th align="center" colspan="2"><h2>Lease A Service</h2></th>
+                </tr>
+                <tr>
+                    <td align="right">Type of Service Required*</td>
+                    <td align="left"><select name="service" id="service" >
+                        <option></option>
+                        <option>Software Development</option>
+                        <option>Web Development</option>
+                        <option>Database Managment</option>
+                        <option>3D Modeling</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Full Name*</td>
+                    <td align="left"><input type="text" size="20" id="name" name="name"></td>
+                </tr>
+                <tr>
+                    <td align="right">Location*</td>
+                    <td align= "left"><input type="text" size="20" id="loc" name="loc"></td>
+                </tr>
+                <tr>
+                    <td align="right">E-mail*</td>
+                    <td align="left"><input type="text" size="20" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td align="right">Company Website</td>
+                    <td align="left"><input type="text" size="20" id="comp" name="comp"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="button" value="submit" onclick="validate()"> <input type="button" value="See More" onclick="redirects()"></td>
+                </tr>
+            </table>
+            <div id="second" style="visibility: hidden;">
+                <table width = 50% align="center" border="0">
+                    <tr>
+                        <th>Got Some Questions ?</th>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            feel free to contact us directly
+                         </td>
+                        <tr><td>
+                            <ul>
+                                <li><a href="https://www.linkedin.com/in/daniel-allaw-370383173">Linkedin</a></li>
+                                <li><a href="https://www.facebook.com/dani.allaw1/">Facebook</a></li>
+                                <li><a href="https://www.instagram.com/danyallaw/?hl=en">Instagram</a></li>
+                            </ul> <br>
+                            Or You can always Revisit our main page for additional information <br>
+                            <a href="Main.html">Main page</a>
+                        </td></tr>
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+        
+    </body>
+</html>
